@@ -1,8 +1,5 @@
-<?php
-   //namespace App\classes\product_mvc_class;
-   namespace App\classes\user_mvc_class;
-   include_once $_SERVER["DOCUMENT_ROOT"].'/app/autoloader.php';
-?>
+<?php include "mvc/mvc.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +12,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 <body class="bg-primary">
-   <?php
-      new Control();
-   ?>
+    <?php new Control(); ?>
 </body>
 </html>
