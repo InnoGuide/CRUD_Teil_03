@@ -33,7 +33,7 @@ class Model extends AbstractCrud {
         $stmt = $this->conn()->prepare($sql);
         $stmt->execute(['first_name' => $_POST['first_name'], 'last_name' => $_POST['last_name']]);   
         if($stmt->rowCount()>0) $this->info=$stmt->rowCount()." Datensatz wurde gespeichert!";
-        else $info="Kein Datenzatz gespeichert!";
+        else $this->info="Kein Datenzatz gespeichert!";
     }
 
     protected function edit(){
