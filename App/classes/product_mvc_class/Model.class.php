@@ -32,7 +32,7 @@ class Model extends AbstractCrud {
         $sql = "INSERT INTO produkt (first_name, last_name) VALUES (:first_name, :last_name)";
         $stmt = $this->conn()->prepare($sql);
         $stmt->execute(['first_name' => $_POST['first_name'], 'last_name' => $_POST['last_name']]);   
-        if($stmt->rowCount()>0) $info=$stmt->rowCount()." Datensatz wurde gespeichert!";
+        if($stmt->rowCount()>0) $this->info=$stmt->rowCount()." Datensatz wurde gespeichert!";
         else $info="Kein Datenzatz gespeichert!";
     }
 
